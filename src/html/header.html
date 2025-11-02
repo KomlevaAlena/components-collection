@@ -1,0 +1,43 @@
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="/">🏠 Components Collection</a>
+        </div>
+        <ul class="nav__list">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/src/pages/about.html">О нас</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+.header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+</style>

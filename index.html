@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components Collection</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .main {
+            flex: 1;
+            padding: 2rem;
+            text-align: center;
+        }
+        .footer {
+            background: #34495e;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🚀 Components Collection</h1>
+    </header>
+    
+    <main class="main">
+        <h2>Vite успешно запущен!</h2>
+        <p>Версия Vite: 4.5.3 - совместима с Node.js 20.9.0</p>
+        <a href="/src/pages/about.html" class="button">Перейти на страницу "О нас"</a>
+        <div style="margin-top: 2rem;">
+            <p>Теперь можно постепенно добавлять функциональность:</p>
+            <ul style="list-style: none; margin-top: 1rem;">
+                <li>✅ Базовая настройка Vite</li>
+                <li>🔄 HTML компоненты</li>
+                <li>🎨 SCSS стили</li>
+                <li>⚛️ React приложения</li>
+            </ul>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Components Collection</p>
+    </footer>
+
+    <script>
+        console.log('✅ Vite работает! Версия 4.5.3');
+    </script>
+</body>
+</html>

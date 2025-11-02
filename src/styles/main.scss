@@ -1,0 +1,48 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.main {
+    flex: 1;
+    padding-top: 80px;
+}
+
+.hero {
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .button {
+        display: inline-block;
+        background: white;
+        color: $primary-color;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 2rem;
+    }
+}
