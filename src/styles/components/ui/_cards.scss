@@ -1,24 +1,3 @@
-<div class="card">
-  <div class="card__image">
-    <img src="/assets/images/photo.jpg" alt="Пример изображения карточки">
-  </div>
-  
-  <div class="card__content">
-    <h3 class="card__title">Компонент карточки</h3>
-    
-    <p class="card__description">Готовая карточка для отображения контента. Адаптивная, стильная и переиспользуемая.</p>
-    
-    <ul class="card__features">
-      <li>Адаптивный дизайн</li>
-      <li>Ховер-эффекты</li>
-      <li>Семантическая разметка</li>
-    </ul>
-    
-    <a href="#card-demo" class="card__button">Использовать компонент</a>
-  </div>
-</div>
-
-<!-- <style>
 .card {
   background: white;
   border-radius: 8px;
@@ -89,4 +68,3 @@
   background: #2c3e50;
   transform: translateY(-2px);
 }
-</style> -->
