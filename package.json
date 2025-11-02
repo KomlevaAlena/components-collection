@@ -7,13 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
+    "deploy": "vite build && gh-pages -d dist",
+    "process-images": "node scripts/process-images.js"
   },
   "homepage": "https://KomlevaAlena.github.io/components-collection",
-  
   "devDependencies": {
     "gh-pages": "^6.0.0",
     "sass": "^1.69.0",
+    "sharp": "^0.34.4",
     "vite": "^4.5.3"
   },
   "dependencies": {

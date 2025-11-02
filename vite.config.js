@@ -12,7 +12,14 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'src/pages/about.html'),
       }
-    }
+    },
+    // Включаем обработку assets
+    assetsInlineLimit: 4096, // файлы меньше 4kb инлайнятся
+  },
+  
+  // Оптимизация для изображений
+  optimizeDeps: {
+    include: ['sharp']
   },
   
   css: {

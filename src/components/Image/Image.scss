@@ -1,0 +1,36 @@
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  
+  &__img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  &--cover {
+    .image__img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  &--contain {
+    .image__img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.image-loading {
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: #666;
+}
