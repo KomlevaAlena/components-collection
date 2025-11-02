@@ -9,6 +9,8 @@
     "preview": "vite preview",
     "deploy": "vite build && gh-pages -d dist"
   },
+  "homepage": "https://KomlevaAlena.github.io/components-collection",
+  
   "devDependencies": {
     "gh-pages": "^6.0.0",
     "sass": "^1.69.0",
