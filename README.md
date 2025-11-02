@@ -36,3 +36,5 @@ npm run build
 npm run deploy
 
 https://komlevaalena.github.io/components-collection/
+
+npm run preview

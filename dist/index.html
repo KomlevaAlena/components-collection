@@ -39,8 +39,32 @@
             border-radius: 5px;
             margin: 1rem;
         }
+        .test-image {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: block;
+        }
+        .features {
+            margin: 2rem 0;
+        }
+        .features ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        .features li {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: white;
+            border-radius: 5px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
-  <script type="module" crossorigin src="/components-collection/assets/main-ff709c18.js"></script>
 </head>
 <body>
     <header class="header">
@@ -50,14 +74,25 @@
     <main class="main">
         <h2>Vite успешно запущен!</h2>
         <p>Версия Vite: 4.5.3 - совместима с Node.js 20.9.0</p>
-        <a href="/src/pages/about.html" class="button">Перейти на страницу "О нас"</a>
-        <div style="margin-top: 2rem;">
+        
+        <!-- Простое статическое изображение -->
+        <img 
+            src="/components-collection/assets/images/photo.jpg" 
+            alt="Тестовое изображение" 
+            class="test-image"
+        >
+        
+        <a href="src/pages/about.html" class="button">Перейти на страницу "О нас"</a>
+        
+        <div class="features">
             <p>Теперь можно постепенно добавлять функциональность:</p>
-            <ul style="list-style: none; margin-top: 1rem;">
+            <ul>
                 <li>✅ Базовая настройка Vite</li>
+                <li>✅ Статические изображения</li>
                 <li>🔄 HTML компоненты</li>
                 <li>🎨 SCSS стили</li>
                 <li>⚛️ React приложения</li>
+                <li>📸 Продвинутая работа с изображениями</li>
             </ul>
         </div>
     </main>
@@ -67,16 +102,17 @@
     </footer>
 
     <script>
-        console.log('✅ Vite работает! Версия 4.5.3');
+        // Простой скрипт для проверки загрузки изображения
+        document.addEventListener('DOMContentLoaded', function() {
+            const img = document.querySelector('.test-image');
+            img.addEventListener('load', function() {
+                console.log('✅ Image loaded successfully');
+            });
+            img.addEventListener('error', function() {
+                console.log('❌ Image failed to load');
+                this.alt = 'Image not found - check console';
+            });
+        });
     </script>
-
-    <img 
-        data-src="photo.jpg" 
-        alt="Description" 
-        data-widths="400,800,1200"
-        data-sizes="(max-width: 768px) 100vw, 50vw"
-        >
-
-        
 </body>
 </html>
