@@ -1,0 +1,40 @@
+// Переменные
+:root {
+  --color-primary: #2c3e50;
+  --color-secondary: #34495e;
+  --color-accent: #3498db;
+  --color-background: #f8f9fa;
+  --color-text: #333;
+  --color-muted: #666;
+}
+
+// Базовые стили
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// Сетка компонентов
+.components-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+// Секции
+.section {
+  padding: 4rem 0;
+  
+  &:nth-child(even) {
+    background: var(--color-background);
+  }
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+  font-size: 2.5rem;
+}

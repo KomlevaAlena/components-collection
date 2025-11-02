@@ -1,0 +1,56 @@
+// Базовые стили для иконок
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  
+  // Анимации
+  &--spin {
+    animation: icon-spin 1s linear infinite;
+  }
+  
+  &--pulse {
+    animation: icon-pulse 1s ease-in-out infinite;
+  }
+  
+  // Размеры
+  &--xs { width: 16px; height: 16px; }
+  &--sm { width: 20px; height: 20px; }
+  &--md { width: 24px; height: 24px; }
+  &--lg { width: 32px; height: 32px; }
+  &--xl { width: 48px; height: 48px; }
+  
+  // Цвета
+  &--primary { color: #3498db; }
+  &--secondary { color: #2c3e50; }
+  &--success { color: #27ae60; }
+  &--warning { color: #f39c12; }
+  &--error { color: #e74c3c; }
+  &--muted { color: #95a5a6; }
+}
+
+// Анимации
+@keyframes icon-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes icon-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+// Социальные иконки
+.icon-social {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  &--facebook:hover { color: #3b5998; }
+  &--twitter:hover { color: #1da1f2; }
+  &--github:hover { color: #333; }
+  &--linkedin:hover { color: #0077b5; }
+  &--instagram:hover { color: #e4405f; }
+}

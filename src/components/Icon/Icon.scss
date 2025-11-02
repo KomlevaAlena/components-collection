@@ -1,0 +1,62 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  transition: all 0.2s ease;
+  
+  // Размеры
+  &--xs {
+    width: 16px;
+    height: 16px;
+  }
+  
+  &--sm {
+    width: 20px;
+    height: 20px;
+  }
+  
+  &--md {
+    width: 24px;
+    height: 24px;
+  }
+  
+  &--lg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  &--xl {
+    width: 48px;
+    height: 48px;
+  }
+  
+  // Цвета
+  &--primary {
+    color: #3498db;
+  }
+  
+  &--secondary {
+    color: #2c3e50;
+  }
+  
+  &--success {
+    color: #27ae60;
+  }
+  
+  &--warning {
+    color: #f39c12;
+  }
+  
+  &--error {
+    color: #e74c3c;
+  }
+  
+  // Состояния
+  &:hover {
+    opacity: 0.8;
+  }
+  
+  &:active {
+    transform: scale(0.95);
+  }
+}

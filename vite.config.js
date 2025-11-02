@@ -25,7 +25,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "./src/styles/variables.scss";`
+        charset: false // может помочь с некоторыми версиями Sass
       }
     }
   },

@@ -4,47 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О нас - Components Collection</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: Arial, sans-serif; 
-            background: #f0f2f5;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        .header {
-            background: #2c3e50;
-            color: white;
-            padding: 1rem;
-        }
-        .main {
-            flex: 1;
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .footer {
-            background: #34495e;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        .button {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1rem;
-        }
-    </style>
 </head>
 <body>
     <header class="header">
         <nav>
-            <a href="../index.html" style="color: white; text-decoration: none;">← На главную</a>
+            <a href="/" style="color: white; text-decoration: none;">← На главную</a>
         </nav>
     </header>
     
@@ -55,14 +19,20 @@
         <ul style="margin: 1rem 0; padding-left: 2rem;">
             <li>Vite 4.5.3</li>
             <li>Node.js 20.9.0</li>
-            <li>Статические изображения</li>
-            <li>Многостраничную архитектуру</li>
+            <li>WebP конвертацию изображений</li>
+            <li>SVG спрайты</li>
+            <li>SCSS стили</li>
         </ul>
-        <a href="../index.html" class="button">Вернуться на главную</a>
+        <a href="/" class="button">Вернуться на главную</a>
     </main>
     
     <footer class="footer">
         <p>&copy; 2024 Components Collection</p>
     </footer>
+
+    <!-- Подключаем стили и скрипты -->
+    <script type="module">
+        import '../main.js';
+    </script>
 </body>
 </html>

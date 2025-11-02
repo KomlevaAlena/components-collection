@@ -4,120 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Components Collection</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: Arial, sans-serif; 
-            background: #f0f2f5;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        .header {
-            background: #2c3e50;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        .main {
-            flex: 1;
-            padding: 2rem;
-            text-align: center;
-        }
-        .footer {
-            background: #34495e;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        .button {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 1rem;
-        }
-        .image-test {
-            max-width: 600px;
-            width: 100%;
-            height: auto;
-            margin: 2rem auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            display: block;
-        }
-        .features {
-            margin: 2rem 0;
-        }
-        .features ul {
-            list-style: none;
-            margin: 1rem 0;
-        }
-        .features li {
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            background: white;
-            border-radius: 5px;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
 </head>
 <body>
-    <header class="header">
-        <h1>🚀 Components Collection</h1>
-    </header>
+    <!-- Хедер компонент -->
+    <div data-component="header"></div>
     
     <main class="main">
-        <h2>Vite с WebP конвертацией!</h2>
-        <p>Изображения автоматически конвертируются в WebP при сборке</p>
-        
-        <!-- Тестовое изображение с WebP -->
-        <picture class="image-test">
-            <source srcset="/assets/images/photo.webp" type="image/webp">
-            <img src="/assets/images/photo.jpg" alt="Тестовое изображение в WebP" class="image-test">
-        </picture>
-        
-        <div class="features">
-            <p>Функциональность:</p>
-            <ul>
-                <li>✅ Автоматическая конвертация в WebP</li>
-                <li>✅ Оптимизация оригинальных изображений</li>
-                <li>✅ Автовыбор формата браузером</li>
-                <li>✅ Отказоустойчивость (продолжает билд при ошибках)</li>
-                <li>🔄 HTML компоненты</li>
-                <li>⚛️ React компоненты</li>
-            </ul>
-        </div>
-        
-        <a href="src/pages/about.html" class="button">Перейти на страницу "О нас"</a>
+        <!-- Герой компонент -->
+        <div data-component="hero"></div>
+
+        <!-- Секция с карточками компонентов -->
+        <section id="components" class="section">
+            <div class="container">
+                <h2>Доступные компоненты</h2>
+                <div class="components-grid">
+                    <!-- Карточка компонента -->
+                    <div data-component="card"></div>
+                    <div data-component="card"></div>
+                    <div data-component="card"></div>
+                </div>
+            </div>
+        </section>
     </main>
     
-    <footer class="footer">
-        <p>&copy; 2024 Components Collection</p>
-    </footer>
+    <!-- Футер компонент -->
+    <div data-component="footer"></div>
 
-    <script>
-        // Проверка что WebP работает
-        document.addEventListener('DOMContentLoaded', function() {
-            const img = document.querySelector('.image-test img');
-            const source = document.querySelector('source[type="image/webp"]');
-            
-            img.addEventListener('load', function() {
-                if (source && img.currentSrc.includes('.webp')) {
-                    console.log('✅ WebP image loaded successfully');
-                } else {
-                    console.log('✅ Fallback image loaded (WebP not supported)');
-                }
-            });
-            
-            img.addEventListener('error', function() {
-                console.log('❌ Image failed to load');
-            });
-        });
-    </script>
+    <!-- Подключаем главный JS файл -->
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>
