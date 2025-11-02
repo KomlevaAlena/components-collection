@@ -39,8 +39,8 @@
             border-radius: 5px;
             margin: 1rem;
         }
-        .test-image {
-            max-width: 500px;
+        .image-test {
+            max-width: 600px;
             width: 100%;
             height: auto;
             margin: 2rem auto;
@@ -72,29 +72,28 @@
     </header>
     
     <main class="main">
-        <h2>Vite успешно запущен!</h2>
-        <p>Версия Vite: 4.5.3 - совместима с Node.js 20.9.0</p>
+        <h2>Vite с WebP конвертацией!</h2>
+        <p>Изображения автоматически конвертируются в WebP при сборке</p>
         
-        <!-- Простое статическое изображение -->
-        <img 
-            src="/assets/images/photo.jpg" 
-            alt="Тестовое изображение" 
-            class="test-image"
-        >
-        
-        <a href="src/pages/about.html" class="button">Перейти на страницу "О нас"</a>
+        <!-- Тестовое изображение с WebP -->
+        <picture class="image-test">
+            <source srcset="/assets/images/photo.webp" type="image/webp">
+            <img src="/assets/images/photo.jpg" alt="Тестовое изображение в WebP" class="image-test">
+        </picture>
         
         <div class="features">
-            <p>Теперь можно постепенно добавлять функциональность:</p>
+            <p>Функциональность:</p>
             <ul>
-                <li>✅ Базовая настройка Vite</li>
-                <li>✅ Статические изображения</li>
+                <li>✅ Автоматическая конвертация в WebP</li>
+                <li>✅ Оптимизация оригинальных изображений</li>
+                <li>✅ Автовыбор формата браузером</li>
+                <li>✅ Отказоустойчивость (продолжает билд при ошибках)</li>
                 <li>🔄 HTML компоненты</li>
-                <li>🎨 SCSS стили</li>
-                <li>⚛️ React приложения</li>
-                <li>📸 Продвинутая работа с изображениями</li>
+                <li>⚛️ React компоненты</li>
             </ul>
         </div>
+        
+        <a href="src/pages/about.html" class="button">Перейти на страницу "О нас"</a>
     </main>
     
     <footer class="footer">
@@ -102,15 +101,21 @@
     </footer>
 
     <script>
-        // Простой скрипт для проверки загрузки изображения
+        // Проверка что WebP работает
         document.addEventListener('DOMContentLoaded', function() {
-            const img = document.querySelector('.test-image');
+            const img = document.querySelector('.image-test img');
+            const source = document.querySelector('source[type="image/webp"]');
+            
             img.addEventListener('load', function() {
-                console.log('✅ Image loaded successfully');
+                if (source && img.currentSrc.includes('.webp')) {
+                    console.log('✅ WebP image loaded successfully');
+                } else {
+                    console.log('✅ Fallback image loaded (WebP not supported)');
+                }
             });
+            
             img.addEventListener('error', function() {
                 console.log('❌ Image failed to load');
-                this.alt = 'Image not found - check console';
             });
         });
     </script>

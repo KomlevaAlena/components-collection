@@ -37,4 +37,23 @@ npm run deploy
 
 https://komlevaalena.github.io/components-collection/
 
+# Убедимся что у нас есть тестовое изображение в src/assets/images/
+ls -la src/assets/images/
+
+# Запускаем конвертацию
+npm run convert-images
+
+# Должен быть вывод:
+# 🚀 Starting image conversion...
+# 📁 Found 1 images in src/assets/images/
+# 🔄 Processing: photo.jpg
+# ✅ Converted: photo.jpg → photo.webp + photo.jpg (optimized)
+
+# Проверяем что файлы создались в public
+ls -la public/assets/images/
+# Должны быть: photo.jpg и photo.webp
+# Собираем проект
+npm run build
+
+# Запускаем превью
 npm run preview

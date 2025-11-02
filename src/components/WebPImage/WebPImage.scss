@@ -1,0 +1,11 @@
+.webp-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  
+  &__img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
