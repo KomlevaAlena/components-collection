@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: '/components-collection/',
+  // base: '/components-collection/',
   
   build: {
     outDir: 'dist',
@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'src/pages/about.html'),
+        button: resolve(__dirname, 'src/pages/button-demo.html'),
       }
     },
     // Включаем обработку assets

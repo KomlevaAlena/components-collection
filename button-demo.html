@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компонент кнопки - Components Collection</title>
+    <link rel="stylesheet" href="/src/styles/main.scss">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/index.html" class="nav__back">← Назад к галерее</a>
+            <h1>Компонент кнопки</h1>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="demo-section">
+            <h2>Демонстрация кнопок</h2>
+            
+            <div class="button-demo">
+                <h3>Разные варианты кнопок:</h3>
+                
+                <div class="button-group">
+                    <button class="btn btn--primary">Основная кнопка</button>
+                    <button class="btn btn--secondary">Вторичная кнопка</button>
+                    <button class="btn btn--success">Успех</button>
+                    <button class="btn btn--danger">Опасность</button>
+                </div>
+                
+                <h3>Разные размеры:</h3>
+                <div class="button-group">
+                    <button class="btn btn--primary btn--small">Маленькая</button>
+                    <button class="btn btn--primary">Обычная</button>
+                    <button class="btn btn--primary btn--large">Большая</button>
+                </div>
+                
+                <h3>Состояния:</h3>
+                <div class="button-group">
+                    <button class="btn btn--primary">Обычная</button>
+                    <button class="btn btn--primary" disabled>Отключенная</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
